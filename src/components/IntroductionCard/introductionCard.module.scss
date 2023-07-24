@@ -1,0 +1,18 @@
+.wrapper {
+  padding: 1rem;
+  width: 700px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  span {
+    font-weight: 500;
+    font-size: 3rem;
+    color: #001b5d;
+  }
+
+  p {
+    font-weight: 400;
+    font-size: 1.2rem;
+  }
+}

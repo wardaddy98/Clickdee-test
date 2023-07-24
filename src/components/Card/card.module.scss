@@ -1,0 +1,67 @@
+.wrapper {
+  height: 300px;
+  width: 300px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+  position: relative;
+  transition: all 0.2s ease-in-out;
+  overflow: hidden;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+  }
+
+  i {
+    font-size: 3rem;
+  }
+
+  span {
+    font-weight: 500;
+    font-size: 1.5rem;
+    color: #001b5d;
+  }
+  p {
+    display: none;
+    font-weight: 500;
+    font-size: 1rem;
+  }
+
+  &:hover {
+    transform: scale(1.1);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    z-index: 1;
+
+    p {
+      display: block;
+    }
+
+    &::after {
+      animation: fill 0.5s;
+      animation-fill-mode: forwards;
+    }
+  }
+}
+
+@keyframes fill {
+  from {
+    background-color: grey;
+    opacity: 0.2;
+  }
+
+  to {
+    background-color: white;
+    width: 900px;
+    height: 900px;
+    opacity: 0.3;
+  }
+}
